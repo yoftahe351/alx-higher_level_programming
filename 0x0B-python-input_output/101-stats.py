@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 """101-stats.py is a program that reads IP logs from stdin and
 prints metrics every ten lines or until EOF or Ctrl-C.
-
 IP logs are formatted as in:
     <IPv4> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>
-
 Example usage:
-
     ~$ ./101-generator.py | ./101-stats.py
      File size: 5213
      200: 2
@@ -56,7 +53,6 @@ Example usage:
 def print_dict_sorted_nonzero(status_codes):
     """Subroutine to print status codes with nonzero value in
     numericalorder.
-
     Args:
         status_codes (dict): dictionary of status codes and the
             number of times each one has been returned.
